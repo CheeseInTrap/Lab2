@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+
+	<package name="com" namespace="/" extends="struts-default">
+		<action name="welcome" class="com.WelcomeAction">
+			<result name="success">/welcome.jsp</result>
+		</action>
+		<action name="queryBookByAuthor" class="com.QueryBookByAuthorAction">
+			<result>/queryBookByAuthor.jsp</result>
+		</action>
+
+		<action name="queryBookByAuthorResult" class="com.QueryBookByAuthorResultAction">
+			<result>/queryBookByAuthorResult.jsp</result>
+		</action>
+
+		<action name="queryBookInfo" class="com.QueryBookInfoAction">
+			<result>/queryBookInfo.jsp</result>
+		</action>
+
+		<action name="deleteBook" class="com.DeleteBookAction">
+			<result name="success">/performSuccess.jsp</result>
+			<result name="error">/performFail.jsp</result>
+		</action>
+		<action name="addBook" class="com.AddBookAction">
+			<result>/addBook.jsp</result>
+		</action>
+		<action name="addBookResult" class="com.AddBookResultAction">
+			<result name="BookExsist">/bookExsist.jsp</result>
+			<result name="success">/success.jsp</result>
+			<result name="error">/performFail.jsp</result>
+		</action>
+		<action name="updateBook" class="com.UpdateBookAction">
+			<result >/updateBook.jsp</result>
+		</action>
+		<action name="updateBookInfoResult" class="com.UpdateBookInfoResultAction">
+			<result name="success">/success.jsp</result>
+			<result name="error">/performFail.jsp</result>
+		</action>
+	</package>
+
+
+</struts>
